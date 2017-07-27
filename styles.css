@@ -1,0 +1,62 @@
+* {
+  border: solid 2px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: none;
+}
+
+header {
+  border-color: green;
+  height: 200px;
+}
+
+main {
+  border-color: purple;
+  top: 200px;
+  height: 75%;
+}
+
+header, main {
+  /*position: relative;*/
+  width: auto;
+  margin-left: 150px;
+}
+
+section {
+  border-color: red;
+}
+
+article {
+  height: 100%;
+}
+
+aside {
+  border-color: blue;
+  height: 60%;
+  width: 25%;
+  margin-left: auto;
+}
+
+ul {
+  border-color: yellowgreen;
+}
+
+.data-display {
+  height: 40%;
+}
+
+.detailed-info {
+  height: 60%;
+  width: 75%;
+}
+
+#main-nav {
+  border-color: cyan;
+  height: 100vh;
+  width: 150px;
+  margin-right: auto;
+  position: fixed;
+}
