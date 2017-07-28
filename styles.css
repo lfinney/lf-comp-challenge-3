@@ -6,17 +6,21 @@
 
 body {
   border: none;
+  height: 100%;
 }
 
 header {
-  border-color: green;
+  background-color: #C8C3CC;
   height: 200px;
 }
 
 main {
-  border-color: purple;
+  background-color: #766A7F;
   top: 200px;
-  height: 75%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
 }
 
 header, main {
@@ -26,35 +30,85 @@ header, main {
 }
 
 section {
-  border-color: red;
+  background-color: #433350;
+  margin: 10px;
 }
 
 article {
   height: 100%;
-}
-
-aside {
-  border-color: blue;
-  height: 60%;
-  width: 25%;
-  margin-left: auto;
+  display: inline-block;
 }
 
 ul {
-  border-color: yellowgreen;
+  border-color: #2A2C37;
+  border-width: 2px 0 0 0;
+}
+
+h2 {
+  color: #DDB041;
+}
+
+p {
+  color: #3E42A4;
+}
+
+.user-profile-snapshot {
+  height: 150px;
 }
 
 .data-display {
-  height: 40%;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.circle-charts {
+  width: 54%;
+}
+
+.recent-data {
+  width: 44%;
 }
 
 .detailed-info {
-  height: 60%;
-  width: 75%;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 11;
+  display: grid;
+  max-height: 575px;
+  min-height: 400px;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 20% 10% 10%;
 }
 
+.change-champ {
+  width: 100px;
+  height: 50px;
+  margin: auto 0 auto 15px;
+  color: #DDB041;
+  background-color: #EFDBA8;
+  border: none;
+}
+
+.detailed-info-characteristic {
+  background-color: #8E8596;
+}
+
+.user-submit-inputs{
+  background-color: #C8C3CC;
+  margin: 10px;
+  grid-column-start: 8;
+  grid-column-end: 11;
+  grid-row-start: 4;
+  grid-row-end: 11;
+}
+
+
+
 #main-nav {
-  border-color: cyan;
+  background-color: #414456;
   height: 100vh;
   width: 150px;
   margin-right: auto;
