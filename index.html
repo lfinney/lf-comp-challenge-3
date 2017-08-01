@@ -79,14 +79,22 @@
 
     <header>
       <div class="user-search-nav">
-        <button><i class="fa fa-bars"></i></button>
-        <input type="text" class="search-site">
-        <button><i class="fa fa-user-plus"></i></button>
-        <button><i class="fa fa-comment"></i></button>
-        <button><i class="fa fa-th"></i></button>
+        <button class="nav-search"><i class="fa fa-bars search-icon"></i></button>
+        <input type="text" class="search-site nav-search" placeholder="Search Champions, Team Comps, or Builds">
+        <button class="nav-search"><i class="fa fa-user-plus search-icon"></i></button>
+        <button class="nav-search"><i class="fa fa-comment search-icon"></i></button>
+        <button class="nav-search last-search-button"><i class="fa fa-th search-icon"></i></button>
       </div>
-      <h1>Quinn &amp; Valor</h1>
-      <h5>Demacia's Wings - <i class="fa fa-map-marker"></i> Demacia, Runterra</h5>
+      <div class="current-page">
+        <div class="current-page-title">
+          <h1>Quinn &amp; Valor</h1>
+          <h5>Demacia's Wings <i class="fa fa-map-marker"></i> <a class="outside-link" href="http://universe.leagueoflegends.com/en_US/region/demacia/">Demacia, Runeterra</a></h5>
+        </div>
+        <button class="view-stream"><span class="live"></span>Watch Live</button>
+        <button class="current-page-icon"><i class="fa fa-bookmark"></i></button>
+        <button class="current-page-icon"><i class="fa fa-pencil"></i></button>
+        <button class="current-page-icon last-current-page-button"><i class="fa fa-plus"></i></button>
+      </div>
       <nav role="sub" class="section-nav">
         <a href="#home">Current Patch</a>
         <a href="#news" class="active">Player Stats</a>
@@ -100,33 +108,37 @@
     <main>
       <section class="data-display">
         <article class="circle-charts">
-          <div class="donut-chart">
-            <svg width="100%" height="100%" viewbox="0 0 100 100">
-              <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
-              <text x="40" y="40" fill="black" font-size="10">Win</text>
-              <text x="40" y="60" fill="black" font-size="10">54.7%</text>
-            </svg>
-          </div>
-          <div class="donut-chart">
-            <svg width="100%" height="100%" viewbox="0 0 100 100">
-              <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
-              <text x="40" y="40" fill="black" font-size="10">Win</text>
-              <text x="40" y="60" fill="black" font-size="10">54.7%</text>
-            </svg>
-          </div>
-          <div class="donut-chart">
-            <svg width="100%" height="100%" viewbox="0 0 100 100">
-              <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
-              <text x="40" y="40" fill="black" font-size="10">Win</text>
-              <text x="40" y="60" fill="black" font-size="10">54.7%</text>
-            </svg>
-          </div>
+          <div class="donut-chart-button-flexbox">
+            <div class="donut-chart">
+              <svg width="100%" height="100%" viewbox="0 0 100 100">
+                <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
+                <text x="40" y="40" fill="black" font-size="10">Win</text>
+                <text x="40" y="60" fill="black" font-size="10">54.7%</text>
+              </svg>
+            </div>
+            <div class="donut-chart">
+              <svg width="100%" height="100%" viewbox="0 0 100 100">
+                <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="124.5"/>
+                <text x="40" y="40" fill="black" font-size="10">Play</text>
+                <text x="40" y="60" fill="black" font-size="10">50.5%</text>
+              </svg>
+            </div>
+            <div class="donut-chart">
+              <svg width="100%" height="100%" viewbox="0 0 100 100">
+                <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
+                <text x="40" y="40" fill="black" font-size="10">Win</text>
+                <text x="40" y="60" fill="black" font-size="10">54.7%</text>
+              </svg>
+              </div>
+            </div>
+          <button class="player-game-total">TOTALS - Out of 2,177 Ranked Games</button>
+
         </article>
         <article class="recent-data">
           <div class="graph_stacked">
@@ -171,36 +183,55 @@
           		</div>
           	</div>
           </div>
+          <button class="player-game-total">Season Wins and Losses</button>
         </article>
       </section>
+      <div class="section-divider">
+
+
+      </div>
       <section class="detailed-info">
-        <h3 class="champion-info">Champion Snapshot</h2>
-          <button class="change-champ">Change Champion</button>
-        <h3 class="role detailed-info-characteristic">Role</h3>
+        <h3 class="detailed-info-category champion-info">Champion Snapshot</h2>
+          <p class="detailed-info-characteristic heading"><button class="change-champ">Change Champion</button></p>
+        <h3 class="role detailed-info-category">Role</h3>
           <p class="role-info detailed-info-characteristic">Marksman</p>
-        <h3 class="position detailed-info-characteristic">Position</h3>
+        <h3 class="position detailed-info-category">Position</h3>
           <p class="position-info detailed-info-characteristic">Top, Bot, Jungle</p>
-        <h3 class="core-items detailed-info-characteristic">Core Items</h3>
+        <h3 class="core-items detailed-info-category">Core Items</h3>
           <p class="core-items-info detailed-info-characteristic">Duskblade</p>
-        <h3 class="keystone detailed-info-characteristic">Keystone</h3>
+        <h3 class="keystone detailed-info-category">Keystone</h3>
           <p class="keystone-info detailed-info-characteristic">Thunderlord's</p>
-        <h3 class="difficulty detailed-info-characteristic">Difficulty</h3>
+        <h3 class="difficulty detailed-info-category">Difficulty</h3>
           <p class="difficulty-info detailed-info-characteristic">Moderate</p>
-        <h3 class="strategy detailed-info-characteristic">Strategy</h3>
+        <h3 class="strategy detailed-info-category">Strategy</h3>
           <p class="strategy-info detailed-info-characteristic">Split-push for days</p>
-        <h3 class="synergies detailed-info-characteristic">Synergies</h3>
+        <h3 class="synergies detailed-info-category">Synergies</h3>
           <p class="synergies-info detailed-info-characteristic">Leona</p>
-        <h3 class="win-rate detailed-info-characteristic">Win Rate</h3>
+        <h3 class="win-rate detailed-info-category">Win Rate</h3>
           <p class="win-rate-info detailed-info-characteristic">100%</p>
       </section>
       <aside class="user-submit-inputs">
-        <button>View OP.GG Data</button>
-        <button>View Mobafire Guides</button>
-        <button>View champion.gg Data</button>
+        <a class="social-media-buttons op-gg"><img src="images/op-gg.jpeg" alt="op.gg logo" class="button-img"><span class="social-media-button-text">View OP.GG Data</span></a>
+        <a class="social-media-buttons mobafire"><img src="images/moba-fire-logo.jpeg" alt="moba fire logo" class="button-img"><span class="social-media-button-text">View Mobafire Guides</a>
+        <a class="social-media-buttons lol-king"></span><img src="images/lol-king.jpeg" alt="lol king logo" class="button-img"><span class="social-media-button-text">View LoL King Data</span></a>
+        <article class="user-submits bottom-border">
+          <h4><i class="fa fa-share"></i>Share Champion Breakdown</h4>
+          <p class="user-submit-guidelines">Copy the URL below to share this Champion Snapshot.</p>
+          <div class="share-info">
+            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button">Copy</button>
+          </div>
+        </article>
+        <article class="user-submits bottom-border">
+          <h4><i class="fa fa-plus-square-o"></i>Add to TeamComp Builder</h4>
+          <p class="user-submit-guidelines">Add this Champion to your team's TeamComp Builder list.</p>
+          <div class="share-info">
+            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button">Copy</button>
+          </div>
+        </article>
         <article class="user-submits">
-          Share Champion Breakdown</article>
-        <article class="user-submits">Add to TeamComp Builder</article>
-        <article class="user-submits">Share a Highlight</article>
+          <h4><i class="fa fa-youtube"></i>Share a Highlight</h4>
+          <p class="user-submit-guidelines">Paste a youtube URL of your highlight playing with this Champion here.</p>
+        </article>
       </aside>
     </main>
   </body>
