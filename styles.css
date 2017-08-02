@@ -672,17 +672,18 @@ button.nav-search:hover {
     display: grid;
     grid-template-rows: 20% 20% 60%;
   }
+
   #main-nav {
     display: grid;
-    grid-row-end: 2;
     grid-row-start: 1;
+    grid-row-end: 2;
     grid-template-columns: repeat(3, 33.3333%);
-    grid-template-rows: repeat(2, 50%;
+    grid-template-rows: repeat(2, 50%;);
     height: 100%;
     margin: 0;
     position: relative;
     width: 100%;
-    )
+
   }
   .user-profile-snapshot {
     grid-column-end: 4;
