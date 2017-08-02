@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=.8, user-scalable=no">
     <title>Quinn &amp; Valor: Demacia's Wings</title>
   </head>
 
@@ -16,8 +17,12 @@
         <img src="images/valor.png" alt="Valor, Quinn's eagle in League of Legends" id="valor">
         <h2 class="user-name">Quinney <i class="fa fa-angle-down"></i></h2>
       </aside>
-      <aside class="main-nav-menu">
+      <aside class="main-nav-menu home-nav">
         <h3 class="nav-categories">Main</h3>
+        <h3 class="nav-categories-link-mobile">
+          <i class="fa fa-bars nav-icon-mobile"></i>
+        Home
+        </h3>
           <div class="nav-section-link">
             <i class="fa fa-home nav-icon"></i>
             <li class="nav-text">Home</li>
@@ -39,8 +44,12 @@
             <li class="nav-text">Patch Info</li>
           </div>
       </aside>
-      <aside class="main-nav-menu">
+      <aside class="main-nav-menu page-nav">
         <h3 class="nav-categories">Your Team</h3>
+        <h3 class="nav-categories-link-mobile">
+          <i class="fa fa-bars nav-icon-mobile"></i>
+        Your Team
+        </h3>
           <div class="nav-section-link">
             <i class="fa fa-user nav-icon"></i>
             <li class="nav-text">Teammates</li>
@@ -63,16 +72,20 @@
           </div>
       </aside>
       <aside class="main-nav-menu main-checkbox-menu">
+        <h3 class="nav-categories-link-mobile">
+          <i class="fa fa-bars nav-icon-mobile"></i>
+        Positions
+        </h3>
         <h3 class="nav-categories">Positions</h3>
-          <input class="colored-checkbox regular-checkbox" id="orange-cb" type="checkbox" /><label for="orange-cb"></label>
+          <input class="colored-checkbox regular-checkbox" id="orange-cb" type="checkbox" /><label class="hide" for="orange-cb"></label>
           <li class="nav-text">Top</li>
-          <input class="colored-checkbox regular-checkbox" id="blue-cb" type="checkbox" /><label for="blue-cb"></label>
+          <input class="colored-checkbox regular-checkbox" id="blue-cb" type="checkbox" /><label class="hide" for="blue-cb"></label>
           <li class="nav-text">Jungle</li>
-          <input class="colored-checkbox regular-checkbox" id="red-cb" type="checkbox" /><label for="red-cb"></label>
+          <input class="colored-checkbox regular-checkbox" id="red-cb" type="checkbox" /><label class="hide" for="red-cb"></label>
           <li class="nav-text">Mid</li>
-          <input class="colored-checkbox regular-checkbox" id="green-cb" type="checkbox" /><label for="green-cb"></label>
+          <input class="colored-checkbox regular-checkbox" id="green-cb" type="checkbox" /><label class="hide" for="green-cb"></label>
           <li class="nav-text">Bot</li>
-          <input class="colored-checkbox regular-checkbox" id="purple-cb" type="checkbox" /><label for="purple-cb"></label>
+          <input class="colored-checkbox regular-checkbox" id="purple-cb" type="checkbox" /><label class="hide" for="purple-cb"></label>
           <li class="nav-text">Support</li>
       </aside>
     </nav>
@@ -90,10 +103,10 @@
           <h1>Quinn &amp; Valor</h1>
           <h5>Demacia's Wings <i class="fa fa-map-marker"></i> <a class="outside-link" href="http://universe.leagueoflegends.com/en_US/region/demacia/">Demacia, Runeterra</a></h5>
         </div>
-        <button class="view-stream"><span class="live"></span>Watch Live</button>
-        <button class="current-page-icon"><i class="fa fa-bookmark"></i></button>
-        <button class="current-page-icon"><i class="fa fa-pencil"></i></button>
-        <button class="current-page-icon last-current-page-button"><i class="fa fa-plus"></i></button>
+        <button class="view-stream c-p-button"><span class="live"></span>Watch Live</button>
+        <button class="current-page-icon c-p-button"><i class="fa fa-bookmark"></i></button>
+        <button class="current-page-icon c-p-button"><i class="fa fa-pencil"></i></button>
+        <button class="current-page-icon last-current-page-button c-p-button"><i class="fa fa-plus"></i></button>
       </div>
       <nav role="sub" class="section-nav">
         <a href="#home">Current Patch</a>
@@ -105,6 +118,7 @@
         <a href="#about">Lore</a>
       </nav>
     </header>
+
     <main>
       <section class="data-display">
         <article class="circle-charts">
@@ -113,101 +127,63 @@
               <svg width="100%" height="100%" viewbox="0 0 100 100">
                 <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
                 <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
-                <text x="40" y="40" fill="black" font-size="10">Win</text>
-                <text x="40" y="60" fill="black" font-size="10">54.7%</text>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#2274A5" stroke-dasharray="251.2" stroke-dashoffset="120"/>
+                <text x="40" y="43" fill="#CBCCD0" font-size="10">Win</text>
+                <text x="35" y="63" fill="#CBCCD0" font-size="10">54.7%</text>
               </svg>
             </div>
             <div class="donut-chart">
               <svg width="100%" height="100%" viewbox="0 0 100 100">
                 <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
                 <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="124.5"/>
-                <text x="40" y="40" fill="black" font-size="10">Play</text>
-                <text x="40" y="60" fill="black" font-size="10">50.5%</text>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#3D7F40" stroke-dasharray="251.2" stroke-dashoffset="124.5"/>
+                <text x="40" y="43" fill="#CBCCD0" font-size="10">Play</text>
+                <text x="35" y="63" fill="#CBCCD0" font-size="10">50.5%</text>
               </svg>
             </div>
             <div class="donut-chart">
               <svg width="100%" height="100%" viewbox="0 0 100 100">
                 <!-- <circle cx="50" cy="50" r="40" fill="tomato"/> -->
                 <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="grey"/>
-                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#00CCFF" stroke-dasharray="251.2" stroke-dashoffset="115"/>
-                <text x="40" y="40" fill="black" font-size="10">Win</text>
-                <text x="40" y="60" fill="black" font-size="10">54.7%</text>
+                <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="10" stroke="#533A71" stroke-dasharray="251.2" stroke-dashoffset="0"/>
+                <text x="29" y="43" fill="#CBCCD0" font-size="10">Mastery</text>
+                <text x="45" y="63" fill="#CBCCD0" font-size="10">7</text>
               </svg>
-              </div>
             </div>
-          <button class="player-game-total">TOTALS - Out of 2,177 Ranked Games</button>
-
-        </article>
-        <article class="recent-data">
-          <div class="graph_stacked">
-          	<div class="col">
-          		<div class="bar"></div>
-          		<div class="bar">
-          			<div class="seg grn" style="height: 44px;"></div>
-          			<div class="seg yel" style="height: 34px;"></div>
-          			<div class="seg" style="height: 72px;"></div>
-          		</div>
-          	</div>
-            <div class="col">
-          		<div class="bar"></div>
-          		<div class="bar">
-          			<div class="seg grn" style="height: 44px;"></div>
-          			<div class="seg yel" style="height: 34px;"></div>
-          			<div class="seg" style="height: 72px;"></div>
-          		</div>
-          	</div>
-            <div class="col">
-          		<div class="bar"></div>
-          		<div class="bar">
-          			<div class="seg grn" style="height: 44px;"></div>
-          			<div class="seg yel" style="height: 34px;"></div>
-          			<div class="seg" style="height: 72px;"></div>
-          		</div>
-          	</div>
-            <div class="col">
-          		<div class="bar"></div>
-          		<div class="bar">
-          			<div class="seg grn" style="height: 44px;"></div>
-          			<div class="seg yel" style="height: 34px;"></div>
-          			<div class="seg" style="height: 72px;"></div>
-          		</div>
-          	</div>
-            <div class="col">
-          		<div class="bar"></div>
-          		<div class="bar">
-          			<div class="seg grn" style="height: 44px;"></div>
-          			<div class="seg yel" style="height: 34px;"></div>
-          			<div class="seg" style="height: 72px;"></div>
-          		</div>
-          	</div>
           </div>
-          <button class="player-game-total">Season Wins and Losses</button>
         </article>
+        <button class="player-game-total total-games">TOTALS - Out of 2,177 Ranked Games</button>
+
+        <article class="recent-data">
+          <div class="graph">
+            <img src="images/quinn-rate.png" alt="Graph of Quinn's winrate over the past year" class="quinnrate">
+          </div>
+        </article>
+        <button class="player-game-total win-percent">Win % Past Year</button>
       </section>
       <div class="section-divider">
-
-
+        <div class="divider-line">
+          <button class="up-button"><i class="fa fa-angle-up"></i></button>
+        </div>
       </div>
       <section class="detailed-info">
         <h3 class="detailed-info-category champion-info">Champion Snapshot</h2>
           <p class="detailed-info-characteristic heading"><button class="change-champ">Change Champion</button></p>
         <h3 class="role detailed-info-category">Role</h3>
-          <p class="role-info detailed-info-characteristic">Marksman</p>
+          <p class="role-info detailed-info-characteristic">Marksman, Fighter</p>
         <h3 class="position detailed-info-category">Position</h3>
           <p class="position-info detailed-info-characteristic">Top, Bot, Jungle</p>
         <h3 class="core-items detailed-info-category">Core Items</h3>
-          <p class="core-items-info detailed-info-characteristic">Duskblade</p>
+          <p class="core-items-info detailed-info-characteristic overflow-text">Duskblade, Youmuu's Ghostblade, Infinity Edge, Static Shiv</p>
         <h3 class="keystone detailed-info-category">Keystone</h3>
-          <p class="keystone-info detailed-info-characteristic">Thunderlord's</p>
+          <p class="keystone-info detailed-info-characteristic">Thunderlord's Decree</p>
         <h3 class="difficulty detailed-info-category">Difficulty</h3>
           <p class="difficulty-info detailed-info-characteristic">Moderate</p>
         <h3 class="strategy detailed-info-category">Strategy</h3>
-          <p class="strategy-info detailed-info-characteristic">Split-push for days</p>
+          <p class="strategy-info detailed-info-characteristic overflow-text">Quinn excels at 1-vs-1 matchups. This gives her a strong presence in the top lane where her opponents are most likely to be melee. Quinn is suspectible to crowd-control effects and since one of her abilities puts her right into melee range, she is not the strongest of team fighters. However, her strong 1-vs-1 abilitiy combined with her utimate, Behind Enemy Lines, makes her an excellent split-pusher who can quickly move around the map.</p>
         <h3 class="synergies detailed-info-category">Synergies</h3>
-          <p class="synergies-info detailed-info-characteristic">Leona</p>
-        <h3 class="win-rate detailed-info-category">Win Rate</h3>
+          <p class="synergies-info detailed-info-characteristic">Leona, Thresh, Tahm Kench, Shen, Zilean</p>
+        <h3 class="win-rate detailed-info-category overflow-text">Win Rate</h3>
           <p class="win-rate-info detailed-info-characteristic">100%</p>
       </section>
       <aside class="user-submit-inputs">
@@ -215,22 +191,25 @@
         <a class="social-media-buttons mobafire"><img src="images/moba-fire-logo.jpeg" alt="moba fire logo" class="button-img"><span class="social-media-button-text">View Mobafire Guides</a>
         <a class="social-media-buttons lol-king"></span><img src="images/lol-king.jpeg" alt="lol king logo" class="button-img"><span class="social-media-button-text">View LoL King Data</span></a>
         <article class="user-submits bottom-border">
-          <h4><i class="fa fa-share"></i>Share Champion Breakdown</h4>
+          <h4><i class="fa fa-share submit-icon"></i>Share Champion Breakdown</h4>
           <p class="user-submit-guidelines">Copy the URL below to share this Champion Snapshot.</p>
           <div class="share-info">
-            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button">Copy</button>
+            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button c-p-button">Copy</button>
           </div>
         </article>
         <article class="user-submits bottom-border">
-          <h4><i class="fa fa-plus-square-o"></i>Add to TeamComp Builder</h4>
+          <h4><i class="fa fa-plus-square-o submit-icon"></i>Add to TeamComp Builder</h4>
           <p class="user-submit-guidelines">Add this Champion to your team's TeamComp Builder list.</p>
           <div class="share-info">
-            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button">Copy</button>
+            <input type="text" placeholder="http://www.league-companion.gg/quinn" class="url-copy"><button class="copy-button c-p-button">Copy</button>
           </div>
         </article>
         <article class="user-submits">
-          <h4><i class="fa fa-youtube"></i>Share a Highlight</h4>
+          <h4><i class="fa fa-youtube submit-icon"></i>Share a Highlight</h4>
           <p class="user-submit-guidelines">Paste a youtube URL of your highlight playing with this Champion here.</p>
+          <div class="share-info last-share-info">
+            <input type="text" placeholder="paste link here" class="url-copy"><button class="copy-button c-p-button">Submit</button>
+          </div>
         </article>
       </aside>
     </main>
