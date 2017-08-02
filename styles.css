@@ -1,5 +1,4 @@
 * {
-  /*border: solid 2px;*/
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -288,8 +287,6 @@ label {
   margin: auto;
 }
 
-#sub-nav {}
-
 .user-search-nav {
   display: grid;
   grid-template-columns: 60px auto 60px 60px 60px;
@@ -522,7 +519,6 @@ button.nav-search:hover {
   grid-row-end: 11;
   grid-row-start: 5;
   grid-template-columns: 33% 67%;
-  grid-template-rows: 60px 60px 60px 60px 60px 60px 120px 60px 60px;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 20% 10% 10%;
   margin-right: 50px;
 }
